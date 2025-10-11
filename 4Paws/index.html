@@ -27,6 +27,7 @@
       <div class="navbar-nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#report">Report</a>
         <a href="#donate">Donasi</a>
         <a href="#adopt">Adopsi</a>
         <a href="#edu">Edukasi</a>
@@ -52,8 +53,90 @@
     <!-- About Section Start -->
     <section id="about" class="about">
       <h2>About Us</h2>
+      <p>This website is a platform dedicated to supporting cat shelters and promoting animal welfare. 
+        Here, visitors can explore information about different shelters, learn about their missions, and discover the cats currently in need of care and adoption. 
+        The platform also makes it easy for people to donate, volunteer, or get involved in shelter programs.
+      </p>
+
+      <div class="card-container">
+
+        <div class="card"> 
+          <div class="card-circle"></div> 
+          <div class="card-body"> 
+            <h2>Support With a Donation</h2>
+            <p>Help us provide food, shelter, and medical care for pets in need. Every contribution makes a difference in saving lives.</p>
+            <button class="card-button">Donate</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-circle"></div>
+          <div class="card-body">
+            <h2>Give Cats a Home</h2>
+            <p>Open your heart and home to a furry friend. Adoption gives them a second chance at life filled with love and care.</p>
+            <button class="card-button">Adopt</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-circle"></div>
+          <div class="card-body">
+            <h2>Spread Awareness</h2>
+            <p>Share knowledge about animal care, adoption, and responsible pet ownership. Your voice can inspire others to take action.</p>
+            <button class="card-button">Educate</button>
+          </div>
+        </div>
+
+      </div>
+
     </section>
     <!-- About Section End -->
+
+    <!-- Report Section Start-->
+    <section id="report" class="report">
+      <main class="content">
+        <h1>Spot a Cat on the Street?</h1>
+        <h2>Report it to us right now!</h2>
+      </main>
+
+    </section>
+    <section>
+      <div class="report-form-container">
+        <div class="report-grid">
+          
+          <div class="grid-item maps">
+            </div>
+          
+          <div class="grid-item form-right">
+            <div class="form-group">
+              <label for="alamat">Detail Alamat</label>
+              <textarea id="alamat" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="deskripsi">Deskripsi</label>
+              <textarea id="deskripsi" rows="5"></textarea>
+            </div>
+          </div>
+          
+          <div class="grid-item upload-box">
+            <label>Foto Kucing</label>
+            <div class="upload-area">
+              <div class="upload-icon">
+                <span>&#x2191;</span>
+              </div>
+              <p>Choose a file or drag &amp; drop it here</p>
+              <p class="file-formats">JPEG, PNG, PDG, and MP4 formats, up to 50MB</p>
+              <button class="browse-button">Browse File</button>
+              <input type="file" hidden>
+            </div>
+          </div>
+          
+        </div>
+        
+        <button class="submit-button">Report</button>
+      </div>
+    </section>
+    <!-- Report Section End-->
 
     <!-- feather icons -->
     <script>
