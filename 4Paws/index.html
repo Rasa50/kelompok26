@@ -44,18 +44,19 @@
     <!-- Hero Section Start -->
     <section class="hero" id="home">
       <main class="content">
-        <h1>You can make a different in their lives.</h1>
-        <a href="#" class="cta">Adopt Now!</a>
+        <h1>Temukan Sahabat Berbulu Impianmu!</h1>
+        <a href="#" class="cta">Mulai Adopsi!</a>
       </main>
     </section>
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
     <section id="about" class="about">
-      <h2>About Us</h2>
-      <p>This website is a platform dedicated to supporting cat shelters and promoting animal welfare. 
-        Here, visitors can explore information about different shelters, learn about their missions, and discover the cats currently in need of care and adoption. 
-        The platform also makes it easy for people to donate, volunteer, or get involved in shelter programs.
+      <h2>Tentang Kami</h2>
+      <p>Kami adalah komunitas pecinta hewan yang berdedikasi untuk menyelamatkan kucing terlantar dari jalanan, 
+        memberikan perawatan, dan menemukan keluarga baru bagi mereka. 
+        Misi kami sederhana menciptakan dunia di mana tidak ada kucing yang harus tidur dalam ketakutan atau kesepian. 
+        Dengan dukungan para relawan, donatur, dan adopter seperti kamu, setiap hari kami berusaha menjembatani harapan dan kasih sayang.
       </p>
 
       <div class="card-container">
@@ -63,8 +64,8 @@
         <div class="card"> 
           <div class="card-circle"></div> 
           <div class="card-body"> 
-            <h2>Support With a Donation</h2>
-            <p>Help us provide food, shelter, and medical care for pets in need. Every contribution makes a difference in saving lives.</p>
+            <h2>Dukung dengan Donasi</h2>
+            <p>Bantu kami menyediakan makanan, tempat berlindung, dan perawatan medis bagi kucing yang membutuhkan.</p>
             <button class="card-button">Donate</button>
           </div>
         </div>
@@ -95,47 +96,51 @@
     <!-- Report Section Start-->
     <section id="report" class="report">
       <main class="content">
-        <h1>Spot a Cat on the Street?</h1>
-        <h2>Report it to us right now!</h2>
+        <h1>Lihat Kucing di Jalan?</h1>
+        <h2>Laporkan Sekarang!</h2>
       </main>
 
     </section>
-    <section>
-      <div class="report-form-container">
-        <div class="report-grid">
-          
-          <div class="grid-item maps">
-            </div>
-          
-          <div class="grid-item form-right">
-            <div class="form-group">
-              <label for="alamat">Detail Alamat</label>
-              <textarea id="alamat" rows="5"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="deskripsi">Deskripsi</label>
-              <textarea id="deskripsi" rows="5"></textarea>
-            </div>
-          </div>
-          
-          <div class="grid-item upload-box">
-            <label>Foto Kucing</label>
-            <div class="upload-area">
-              <div class="upload-icon">
-                <span>&#x2191;</span>
-              </div>
-              <p>Choose a file or drag &amp; drop it here</p>
-              <p class="file-formats">JPEG, PNG, PDG, and MP4 formats, up to 50MB</p>
-              <button class="browse-button">Browse File</button>
-              <input type="file" hidden>
-            </div>
-          </div>
-          
+    <section class="report-form-container">
+  <div class="report-grid">
+    <div class="grid-item location-section">
+      <div class="location-input">
+        <div class="gps-button">
+          <i class="fas fa-map-marker-alt"></i>
+          Aktifkan GPS: Gunakan Lokasi Saya
         </div>
-        
-        <button class="submit-button">Report</button>
+        <input type="text" placeholder="Ketik nama jalan, alamat, atau patokan terdekat ">
       </div>
-    </section>
+      <small class="location-info">Lokasi GPS Anda akan digunakan untuk penandaan awal</small>
+    </div>
+
+    <div class="grid-item media-condition-section">
+      <div class="photo-upload-box">
+        <label>Foto Kucing</label>
+        <div class="upload-area">
+          <span>[Ambil foto atau pilih dalam galeri]</span>
+        </div>
+      </div>
+      <div class="cat-condition-box">
+        <label>Kondisi Kucing</label>
+        <div class="condition-options">
+          <label><input type="radio" name="condition" value="Sehat / Normal"> Sehat / Normal</label>
+          <label><input type="radio" name="condition" value="Terluka"> Terluka</label>
+          <label><input type="radio" name="condition" value="Sakit"> Sakit</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-item additional-details-section">
+      <label>Detail Tambahan</label>
+      <textarea placeholder="Jelaskan secara spesifik detail atau keadaan kucing yang Anda temukan."></textarea>
+    </div>
+
+    <div class="grid-item report-button-container">
+      <button class="report-button">Lapor</button>
+    </div>
+  </div>
+</section>
     <!-- Report Section End-->
 
     <!-- feather icons -->
