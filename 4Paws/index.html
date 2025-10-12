@@ -99,48 +99,45 @@
         <h1>Lihat Kucing di Jalan?</h1>
         <h2>Laporkan Sekarang!</h2>
       </main>
-
     </section>
-    <section class="report-form-container">
-  <div class="report-grid">
-    <div class="grid-item location-section">
-      <div class="location-input">
-        <div class="gps-button">
-          <i class="fas fa-map-marker-alt"></i>
-          Aktifkan GPS: Gunakan Lokasi Saya
-        </div>
-        <input type="text" placeholder="Ketik nama jalan, alamat, atau patokan terdekat ">
-      </div>
-      <small class="location-info">Lokasi GPS Anda akan digunakan untuk penandaan awal</small>
-    </div>
+      
+    <section class="report-form-section">
+      <div class="report-form-container">
+        <div class="report-grid">
+          <div class="grid-item location-area">
+            <div class="gps-button">
+                <i class="fas fa-map-marker-alt"></i>
+                Aktifkan GPS: Gunakan Lokasi Saya
+            </div>
+            <input type="text" placeholder="Ketik nama jalan, alamat, atau patokan terdekat">
+            <small class="location-info">Lokasi GPS Anda akan digunakan untuk penandaan awal</small>
+          </div>
 
-    <div class="grid-item media-condition-section">
-      <div class="photo-upload-box">
-        <label>Foto Kucing</label>
-        <div class="upload-area">
-          <span>[Ambil foto atau pilih dalam galeri]</span>
-        </div>
-      </div>
-      <div class="cat-condition-box">
-        <label>Kondisi Kucing</label>
-        <div class="condition-options">
-          <label><input type="radio" name="condition" value="Sehat / Normal"> Sehat / Normal</label>
-          <label><input type="radio" name="condition" value="Terluka"> Terluka</label>
-          <label><input type="radio" name="condition" value="Sakit"> Sakit</label>
-        </div>
-      </div>
-    </div>
+          <div class="grid-item photo-box">
+            <label for="upload-file">Foto Kucing</label>
+            <div class="upload-area-content" id="upload-area">
+              <span>[Ambil foto atau pilih dalam galeri]</span>
+            </div>
+            <input type="file" id="upload-file" accept="image/jpeg,image/png,image/mp4,application/pdf" hidden>
+          </div>
 
-    <div class="grid-item additional-details-section">
-      <label>Detail Tambahan</label>
-      <textarea placeholder="Jelaskan secara spesifik detail atau keadaan kucing yang Anda temukan."></textarea>
-    </div>
+          <div class="grid-item condition-box">
+            <label>Kondisi Kucing</label>
+            <div class="condition-options">
+              <label><input type="radio" name="condition" value="Sehat / Normal" checked> Sehat / Normal</label>
+              <label><input type="radio" name="condition" value="Terluka"> Terluka</label>
+              <label><input type="radio" name="condition" value="Sakit"> Sakit</label>
+            </div>
+          </div>
 
-    <div class="grid-item report-button-container">
-      <button class="report-button">Lapor</button>
-    </div>
-  </div>
-</section>
+          <div class="grid-item details-box">
+            <label for="detail-tambahan">Detail Tambahan</label>
+            <textarea id="detail-tambahan" placeholder="Jelaskan secara spesifik detail atau keadaan kucing yang Anda temukan."></textarea>
+          </div>
+        </div>
+        <button class="submit-button">Lapor</button>
+      </div>
+    </section>
     <!-- Report Section End-->
 
     <!-- feather icons -->
