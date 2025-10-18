@@ -97,10 +97,12 @@
     <section id="report" class="report">
       <main class="content">
         <h1>Lihat Kucing di Jalan?</h1>
-        <h2>Laporkan Sekarang!</h2>
+        <a href="#report-form" class="cta-report">Laporkan Sekarang!</a>
       </main>
     </section>
-      
+
+    <section class="report-form-section" id="report-form"></section>
+    
     <section class="report-form-section">
       <div class="report-form-container">
         <div class="report-grid">
@@ -118,7 +120,7 @@
             <div class="upload-area-content" id="upload-area">
               <span>[Ambil foto atau pilih dalam galeri]</span>
             </div>
-            <input type="file" id="upload-file" accept="image/jpeg,image/png,image/mp4,application/pdf" hidden>
+            <input type="file" id="upload-file" accept="image/jpeg,image/png,image/mp4,application/pdf" hidden> 
           </div>
 
           <div class="grid-item condition-box">
@@ -139,6 +141,141 @@
       </div>
     </section>
     <!-- Report Section End-->
+
+
+    <!-- Donate Section Start -->
+    <section id="donate" class="donate">
+      <h2>Ulurkan Tangan, Selamatkan Cakar Kecil Mereka</h2>
+      <p>Donasi anda memberikan kehidupan, harapan, dan masa depan yang lebih baik bagi kucing-kucing terlantar.</p>
+
+
+
+      <!-- Dinamik Card untuk modal -->
+      
+      
+      <!-- <div class="inner-card">
+        <div class="card-donasi-body"> 
+          <button 
+            class="card-donasi-button open-modal-btn" 
+            data-shelter-id="{{SHELLTER_ID}}">
+            Lihat Detail
+          </button>
+          
+          <button class="card-donasi-button">Transparansi</button>
+        </div>
+      </div>
+
+      <div id="modal-{{SHELLTER_ID}}" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          
+          <h3>Detail Donasi Shelter ID: {{SHELLTER_ID}}</h3>
+        </div>
+      </div> -->
+      
+      <div class="card-donasi">
+        <div class="inner-card">
+          <div class="card-donasi-body"> 
+              <img src="./images/Profile/_Siamese_.jpeg" alt="Foto Profile Shelter">
+              <h2>Happy paws Shelter - Jakarta</h2>
+              <div class="rating">
+                <span class="filled-star">★</span>
+                <span class="filled-star">★</span>
+                <span class="filled-star">★</span>
+                <span class="filled-star">★</span> 
+                <span class="empty-star">★</span> 
+              </div>
+              <button class="card-donasi-button">Donasi ke shelter ini</button>
+              <button class="card-donasi-button">Transparansi</button>
+            </div>
+          </div>
+          
+          <div class="inner-card">
+            <div class="card-donasi-body"> 
+              <img src="./images/Profile/_Siamese_.jpeg" alt="Foto Profile Shelter">
+              <h2>Happy paws Shelter</h2>
+              <div class="rating">
+                <span class="filled-star">★</span>
+                <span class="filled-star">★</span>
+                <span class="filled-star">★</span>
+                <span class="filled-star">★</span> 
+                <span class="empty-star">★</span>
+              </div>
+              <button class="card-donasi-button">Donasi ke shelter ini</button>
+              <button class="card-donasi-button">Transparansi</button>
+            </div>
+          </div>
+          
+          <div class="inner-card">
+            <div class="card-donasi-body"> 
+              <img src="./images/Profile/_Siamese_.jpeg" alt="Foto Profile Shelter">
+              <h2>Happy paws Shelter</h2>
+              <div class="rating">
+                <span class="filled-star">★</span>
+                <span class="filled-star">★</span>
+                <span class="filled-star">★</span>
+                <span class="filled-star">★</span> 
+                <span class="empty-star">★</span>
+              </div>
+              <button class="card-donasi-button">Donasi ke shelter ini</button>
+              <button class="card-donasi-button">Transparansi</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div>
+          <h1>Selesaikan Donasi Anda</h1>
+
+          <!-- rekomendasi dari urang mending di hapus -->
+
+          <label for="pilihan-shelter">Pilih Shelter:</label>
+          <select id="pilihan-shelter" name="shelter">
+              <option value="" disabled selected>-- Pilih salah satu --</option> 
+              <option value="happy">Happy Paws</option>
+              <option value="onlyPaws">Only Paws</option>
+              <option value="pawspol">Paws Pol</option>
+          </select>
+          <!-- sampe sini -->
+
+          
+          <h1>Nominal Donasi</h1>
+          <textarea id="jumlah-nominal" placeholder="contoh : 50.000"></textarea>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="nama">Nama Lengkap</label>
+              <input type="text" id="nama" name="nama_lengkap" placeholder="cth: John Doe">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="cth: johndoe@gmail.com">
+            </div>
+
+            <div class="form-group">
+              <label for="telp">No Telp</label>
+              <input type="tel" id="telp" name="no_telp" placeholder="cth: 0812345678">
+            </div>
+          </form>
+
+          <h1>Bukti Pembayaran</h1>
+            <div class="upload-area-content" id="upload-area">
+              <span>[Ambil foto atau pilih dalam galeri]</span>
+            </div>
+            <input type="file" id="upload-file" accept="image/jpeg,image/png,image/mp4,application/pdf" hidden>
+
+            <h1>payment Method</h1>
+            <div class="condition-options">
+              <label><input type="radio" name="condition" value="Bank Transfer">Transfer</label>
+              <label><input type="radio" name="condition" value="Qris"> Qris</label>
+              <label><input type="radio" name="condition" value="E-Wallet"> Dompet Elektronik</label>
+            </div>
+
+            <button class="payment-button">Submit</button>
+        </div>
+
+     </section>
+    <!-- Donate Section End -->
 
     <!-- feather icons -->
     <script>

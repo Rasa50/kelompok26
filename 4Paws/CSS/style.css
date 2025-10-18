@@ -1,14 +1,23 @@
 :root {
-  --primary: #fff;
-  --bg: #91b87e;
-  --sekunder: #013100;
-  --teks: #131111;
-  --teksSec: #d4c1c1da;
+  --primary: #dde3ff;
+  --sekunder: #e5fcd5;
+  --third: #23371f;
+
+  --adminSec:#647958;
+  --bg: #a4bd9f;
+
+  --teks: #23371f;
+  --teksSec: #121311;
+  --teksThird:#f1ffee;
+
+  --bg-form-container: #8bb576; 
+  --bg-location-area: #e9e9e9; 
+  --color-border-dashed: #b3b3b3;
 }
 
 * {
   margin: 0;
-  padding: 0%;
+  padding: 0;
   box-sizing: border-box;
   outline: none;
   border: none;
@@ -19,8 +28,9 @@ body {
   font-family: "Rubik", sans-serif;
   background-color: var(--bg);
   color: var(--teks);
-  min-height: 2000px;
+  min-height: 4000px;
 }
+
 
 /* Navbar */
 
@@ -29,43 +39,41 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.3rem 7%;
-  /* background-color: var(--bg); */
   background-color: transparent;
-  /* border-bottom: 1px solid #8bb576; */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99999999999;
+  z-index: 99999; 
 }
 
 .navbar .navbar-logo {
   font-size: 1.8rem;
   font-weight: 600;
-  color: aquamarine;
+  color: var(--teksThird);
   font-style: italic;
 }
 
 .navbar .navbar-logo span {
-  color: var(--primary);
+  color: var(--teksSec);
 }
 
 .navbar .navbar-nav a {
-  color: var(--primary);
+  color: var(--teksSec);
   display: inline-block;
   font-size: 1.4rem;
   margin: 0 1.4rem;
 }
 
 .navbar .navbar-nav a:hover {
-  color: blanchedalmond;
+  color: var(--teksThird);
 }
 
 .navbar .navbar-nav a::after {
   content: "";
   display: block;
   padding-bottom: 0.5rem;
-  border-bottom: 0.1rem solid var(--primary);
+  border-bottom: 0.1rem solid var(--teksThird);
   transform: scaleX(0);
   transition: 0.2s linear;
 }
@@ -75,17 +83,18 @@ body {
 }
 
 .navbar .navbar-extra a {
-  color: var(--primary);
+  color: var(--teksSec);
   margin: 0 0.5rem;
 }
 
 .navbar .navbar-extra a:hover {
-  color: var(--bg);
+  color: var(--teksThird);
 }
 
 #humburger-menu {
   display: none;
 }
+
 
 /* Hero Section */
 .hero {
@@ -101,7 +110,7 @@ body {
   text-align: right;
 }
 
-.hero ::after {
+.hero::after {
   content: "";
   display: block;
   position: absolute;
@@ -123,7 +132,7 @@ body {
 
 .hero .content h1 {
   font-size: 5em;
-  color: var(--primary);
+  color: var(--teksSec);
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   line-height: 1.2;
 }
@@ -133,11 +142,12 @@ body {
   display: inline-block;
   padding: 1rem 3rem;
   font-size: 1.4rem;
-  color: var(--primary);
-  background-color: var(--sekunder);
+  color: var(--teksThird);
+  background-color: var(--third);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
+
 
 /* About Section */
 .about {
@@ -156,7 +166,8 @@ body {
   margin-bottom: 3rem;
 }
 
-/* Card Section */
+
+/* Card Section (About) */
 .card-container {
   display: flex;
   gap: 30px;
@@ -169,13 +180,13 @@ body {
 .card {
   position: relative;
   width: 300px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--teksSec);
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: visible;
   text-align: center;
   font-family: sans-serif;
-  background-color: var(--primary);
+  background-color: transparent;
 }
 
 .card-circle {
@@ -185,7 +196,7 @@ body {
   transform: translateX(-50%);
   width: 60px;
   height: 60px;
-  background-color: var(--sekunder);
+  background-color: var(--third);
   border-radius: 50%;
 }
 
@@ -198,19 +209,20 @@ body {
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 10px;
+  color: var(--teksSec);
 }
 
 .card-body p {
   font-size: 1em;
-  color: #555;
+  color: var(--teksSec);
   line-height: 1.5;
   margin-bottom: 20px;
 }
 
 .card-button {
-  background-color: var(--sekunder);
-  color: var(--primary);
-  border: 1px solid var(--sekunder);
+  background-color: var(--third);
+  color: var(--teksThird);
+  border: 1px solid var(--third);
   padding: 15px 30px;
   text-align: center;
   font-size: 1em;
@@ -223,9 +235,11 @@ body {
 }
 
 .card-button:hover {
-  background-color: var(--sekunder);
+  background-color: var(--adminSec);
+  color: var(--teks);
   transform: scale(1.05);
 }
+
 
 /* Report Section */
 .report {
@@ -239,6 +253,28 @@ body {
   position: relative;
   justify-content:flex-end;
   text-align: left;
+}
+
+.report .content h1 {
+  color: var(--teksSec);
+}
+
+.report .content .cta-report {
+  margin-top: 0;
+  display: inline-block;
+  font-size: 1.6rem;
+  /* color: var(--bg); */
+  color: var(--teksSec);
+  background-color: transparent;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.report .content .cta-report:hover {
+  background-color: transparent;
+  transform: scale(1.05);
 }
 
 .report-form-section {
@@ -269,7 +305,7 @@ body {
 }
 
 .grid-item {
-  background-color: var(--primary);
+  background-color: var(--bg-form-container);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -282,8 +318,8 @@ body {
 }
 
 .gps-button {
-  background-color: var(--sekunder);
-  color: var(--primary);
+  background-color: var(--third);
+  color: var(--teksThird);
   padding: 10px 15px;
   border-radius: 25px;
   display: inline-flex;
@@ -327,7 +363,7 @@ body {
 
 .upload-area-content {
   border: 2px dashed var(--color-border-dashed);
-  background-color: var(--primary);
+  background-color: white;
   border-radius: 10px;
   padding: 50px 20px;
   text-align: center;
@@ -385,8 +421,8 @@ body {
 }
 
 .submit-button {
-  background-color: var(--sekunder);
-  color: var(--primary);
+  background-color: var(--third);
+  color: var(--teksThird);
   border: none;
   padding: 15px 40px;
   border-radius: 50px;
@@ -401,6 +437,194 @@ body {
 .submit-button:hover {
   background-color: #1a5c1a;
 }
+
+
+
+/* Donate Section */
+.donate {
+  padding: 10rem 7% 1.4rem;
+}
+
+.donate  h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 0;
+  color: var(--teksSec);
+}
+
+.donate p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 4rem; 
+  color: var(--teks);
+  opacity: 80%;
+}
+
+
+.card-donasi {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  padding: 50px;
+}
+
+.inner-card {
+  position: relative;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  font-family: sans-serif;
+  background-color:white;
+}
+
+.inner-card .card-donasi-body img { 
+  width: 90%;
+  height: 200px;
+  border-radius: 9%;
+  object-fit: cover; 
+  margin: 20px auto 10px auto;
+  display: block; 
+}
+
+.inner-card .card-donasi-body .rating .filled-star {
+  color: gold;
+}
+
+.inner-card .rating .empty-star { 
+  color: var(--third);
+}
+
+.card-donasi-body {
+  padding: 20px; 
+}
+
+.card-donasi-body h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card-donasi-body p {
+  font-size: 1em;
+  color: var(--teksThird);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card-donasi-button {
+  background-color: var(--third);
+  color: var(--primary);
+  border: 1px solid var(--sekunder);
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 80%;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-donasi-button:hover {
+  background-color: var(--primary);
+  color: var();
+  transform: scale(1.05);
+}
+
+/* Container Utama Form Donasi */
+.donate > div:last-child { 
+    background-color: #8bb576; 
+    padding: 30px 7%;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+}
+
+.donate > div:last-child h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--teks);
+    margin-top: 0;
+}
+
+#pilihan-shelter, #jumlah-nominal, .contact-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#pilihan-shelter {
+    appearance: none;
+    background-color: white;
+    margin-bottom: 20px;
+    width: 400px; 
+}
+
+.donate label[for="pilihan-shelter"] {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--teks);
+}
+
+/* Payment Method (Radio Button) */
+.payment-method-options {
+    display: flex;
+    gap: 30px; 
+    margin-top: 15px;
+}
+
+.payment-method-options label {
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    color: var(--teks);
+}
+
+.payment-method-options input[type="radio"] {
+    accent-color: var(--third);
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+.payment-button {
+    background-color: var(--third);
+    color: var(--teksThird);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    margin-top: 30px;
+    align-self: flex-start;
+}
+
+.payment-button:hover {
+    background-color: var(--adminSec);
+}
+
 
 /* Media queries */
 
@@ -418,6 +642,24 @@ body {
   }
 
   #humburger-menu {
+    display: inline-block;
+  }
+  
+  .report-grid {
+    grid-template-columns: 1fr 1fr; 
+  }
+  
+  .location-area {
+    grid-column: 1 / span 2; /* Mencakup 2 kolom */
+  }
+
+  .details-box {
+    grid-column: 1 / span 2; /* Mencakup 2 kolom */
+  }
+  
+  /* Navbar */
+
+  #humberger-menu {
     display: inline-block;
   }
 
@@ -457,4 +699,20 @@ body {
   html {
     font-size: 55%;
   }
+
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .location-area, .details-box {
+    grid-column: auto;
+  }
+
+  .donation-form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    #pilihan-shelter {
+        width: 100%;
+    }
 }
