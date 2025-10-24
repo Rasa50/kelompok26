@@ -3,15 +3,16 @@
   --sekunder: #e5fcd5;
   --third: #23371f;
 
-  --adminSec:#647958;
+  --adminSec: #647958;
   --bg: #a4bd9f;
 
   --teks: #23371f;
   --teksSec: #121311;
-  --teksThird:#f1ffee;
+  --teksThird: #f1ffee;
+  --shadowText: #4e5449;
 
-  --bg-form-container: #8bb576; 
-  --bg-location-area: #e9e9e9; 
+  --bg-form-container: #8bb576;
+  --bg-location-area: #e9e9e9;
   --color-border-dashed: #b3b3b3;
 }
 
@@ -31,7 +32,6 @@ body {
   min-height: 4000px;
 }
 
-
 /* Navbar */
 
 .navbar {
@@ -44,7 +44,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99999; 
+  z-index: 99999;
 }
 
 .navbar .navbar-logo {
@@ -95,13 +95,12 @@ body {
   display: none;
 }
 
-
 /* Hero Section */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(../images/landingPage.jpg);
+  background-image: url(../images/Background/landingPage.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -148,10 +147,9 @@ body {
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
-
 /* About Section */
 .about {
-  padding: 10rem 7% 1.4rem;
+  padding: 5rem 7% 1.4rem;
 }
 
 .about h2 {
@@ -165,7 +163,6 @@ body {
   font-size: 1.5rem;
   margin-bottom: 3rem;
 }
-
 
 /* Card Section (About) */
 .card-container {
@@ -240,20 +237,23 @@ body {
   transform: scale(1.05);
 }
 
-
 /* Report Section */
 .report {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(../images/report1.jpg);
+  background-image: url(../images/Background/report.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
-  justify-content:flex-end;
+  justify-content: flex-end;
   text-align: left;
 }
+/* 
+.report .content {
+  
+} */
 
 .report .content h1 {
   color: var(--teksSec);
@@ -348,12 +348,15 @@ body {
   display: block;
 }
 
-.photo-box, .condition-box {
+.photo-box,
+.condition-box {
   display: flex;
   flex-direction: column;
 }
 
-.photo-box label, .condition-box label, .details-box label {
+.photo-box label,
+.condition-box label,
+.details-box label {
   font-weight: 600;
   margin-bottom: 10px;
   display: block;
@@ -395,7 +398,7 @@ body {
 }
 
 .condition-options input[type="radio"] {
-  accent-color: var(--sekunder); 
+  accent-color: var(--sekunder);
   margin-right: 10px;
   width: 18px;
   height: 18px;
@@ -403,7 +406,7 @@ body {
 
 .details-box {
   padding-bottom: 30px;
-  }
+}
 
 .details-box textarea {
   width: 100%;
@@ -438,14 +441,12 @@ body {
   background-color: #1a5c1a;
 }
 
-
-
 /* Donate Section */
 .donate {
-  padding: 10rem 7% 1.4rem;
+  padding: 5rem 7% 1.4rem;
 }
 
-.donate  h2 {
+.donate h2 {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 0;
@@ -455,11 +456,10 @@ body {
 .donate p {
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 4rem; 
+  margin-bottom: 4rem;
   color: var(--teks);
   opacity: 80%;
 }
-
 
 .card-donasi {
   display: grid;
@@ -479,28 +479,28 @@ body {
   overflow: hidden;
   text-align: center;
   font-family: sans-serif;
-  background-color:white;
+  background-color: white;
 }
 
-.inner-card .card-donasi-body img { 
+.inner-card .card-donasi-body img {
   width: 90%;
   height: 200px;
   border-radius: 9%;
-  object-fit: cover; 
+  object-fit: cover;
   margin: 20px auto 10px auto;
-  display: block; 
+  display: block;
 }
 
 .inner-card .card-donasi-body .rating .filled-star {
   color: gold;
 }
 
-.inner-card .rating .empty-star { 
+.inner-card .rating .empty-star {
   color: var(--third);
 }
 
 .card-donasi-body {
-  padding: 20px; 
+  padding: 20px;
 }
 
 .card-donasi-body h2 {
@@ -537,94 +537,248 @@ body {
 
 .card-donasi-button:hover {
   background-color: var(--primary);
-  color: var();
+  color: var(--teksSec);
   transform: scale(1.05);
 }
 
 /* Container Utama Form Donasi */
-.donate > div:last-child { 
-    background-color: #8bb576; 
-    padding: 30px 7%;
-    margin-top: 50px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 25px; 
+.donate > div:last-child {
+  background-color: #8bb576;
+  padding: 30px 7%;
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .donate > div:last-child h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--teks);
-    margin-top: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--teks);
+  margin-top: 0;
 }
 
-#pilihan-shelter, #jumlah-nominal, .contact-form input {
-    width: 100%;
-    padding: 12px 15px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+#pilihan-shelter,
+#jumlah-nominal,
+.contact-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 #pilihan-shelter {
-    appearance: none;
-    background-color: white;
-    margin-bottom: 20px;
-    width: 400px; 
+  appearance: none;
+  background-color: white;
+  margin-bottom: 20px;
+  width: 400px;
 }
 
 .donate label[for="pilihan-shelter"] {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: var(--teks);
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--teks);
 }
 
 /* Payment Method (Radio Button) */
 .payment-method-options {
-    display: flex;
-    gap: 30px; 
-    margin-top: 15px;
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
 }
 
 .payment-method-options label {
-    font-size: 1rem;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    color: var(--teks);
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  color: var(--teks);
 }
 
 .payment-method-options input[type="radio"] {
-    accent-color: var(--third);
-    margin-right: 8px;
-    width: 16px;
-    height: 16px;
+  accent-color: var(--third);
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
 }
 
 .payment-button {
-    background-color: var(--third);
-    color: var(--teksThird);
-    border: none;
-    padding: 15px 40px;
-    border-radius: 50px;
-    font-size: 1.2em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 200px;
-    margin-top: 30px;
-    align-self: flex-start;
+  background-color: var(--third);
+  color: var(--teksThird);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px;
+  margin-top: 30px;
+  align-self: flex-start;
 }
 
 .payment-button:hover {
-    background-color: var(--adminSec);
+  background-color: var(--adminSec);
 }
 
+/* Adopt Section */
+
+.adopt {
+  padding: 5rem 7% 1.4rem;
+}
+
+.adopt p {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0;
+  color: var(--shadowText);
+  padding: 0 10%;
+}
+
+.adopt h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 0;
+  color: var(--teksSec);
+}
+
+.adopt h3 {
+  text-align: left;
+  font-size: 1.4rem;
+  margin-top: 3%;
+  margin-bottom: 0;
+  color: var(--teksSec);
+}
+
+.kontainer-utama {
+  background-color: #e8f5e9;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 50px auto;
+  max-width: 80%;
+}
+
+.search-input {
+  border-radius: 50px;
+  border: 2px solid #38501e;
+  background-color: white;
+  color: #38501e;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #1a2b0c;
+}
+
+.bagian-filter h2 {
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.filter-btn-primary {
+  border-radius: 50px;
+  border: 2px solid #38501e;
+  background-color: white;
+  color: #38501e;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+  outline: none;
+}
+
+.filter-btn-primary:focus {
+  border-color: var(--third);
+}
+
+.filter-btn-primary:hover {
+  background-color: var(--third);
+  color: var(--teksThird);
+}
+
+.card-adopt {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  padding: 50px;
+}
+
+.card-adopt-inside {
+  position: relative;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: white;
+}
+
+.card-adopt-inside .card-adopt-body img {
+  width: 90%;
+  height: 200px;
+  border-radius: 9%;
+  object-fit: fill;
+  margin: 20px auto 10px auto;
+  display: block;
+}
+
+.card-adopt-body {
+  padding: 20px;
+}
+
+.card-adopt-body h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.card-adopt-body p {
+  font-size: 1em;
+  color: var(--teksSec);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.detail-button {
+  background-color: var(--third);
+  color: var(--primary);
+  border: 1px solid var(--sekunder);
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 50%;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detail-button:hover {
+  background-color: var(--sekunder);
+  color: var(--shadowText);
+  transform: scale(1.05);
+}
 
 /* Media queries */
 
@@ -644,11 +798,11 @@ body {
   #humburger-menu {
     display: inline-block;
   }
-  
+
   .report-grid {
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
   }
-  
+
   .location-area {
     grid-column: 1 / span 2; /* Mencakup 2 kolom */
   }
@@ -656,7 +810,7 @@ body {
   .details-box {
     grid-column: 1 / span 2; /* Mencakup 2 kolom */
   }
-  
+
   /* Navbar */
 
   #humberger-menu {
@@ -703,16 +857,17 @@ body {
   .report-grid {
     grid-template-columns: 1fr;
   }
-  
-  .location-area, .details-box {
+
+  .location-area,
+  .details-box {
     grid-column: auto;
   }
 
   .donation-form-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    #pilihan-shelter {
-        width: 100%;
-    }
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  #pilihan-shelter {
+    width: 100%;
+  }
 }
