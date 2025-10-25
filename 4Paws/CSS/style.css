@@ -1,3 +1,6 @@
+/*========================
+  1. Variabel Warna
+========================*/
 :root {
   --primary: #dde3ff;
   --sekunder: #e5fcd5;
@@ -14,8 +17,18 @@
   --bg-form-container: #8bb576;
   --bg-location-area: #e9e9e9;
   --color-border-dashed: #b3b3b3;
+
+  /* Font Sizes */
+  --font-xl: 5em;
+  --font-lg: 3rem;
+  --font-md: 2.6rem;
+  --font-sm: 1.5rem;
+  --font-xs: 1.4rem;
 }
 
+/*========================
+  2. Base / Reset
+========================*/
 * {
   margin: 0;
   padding: 0;
@@ -32,8 +45,9 @@ body {
   min-height: 4000px;
 }
 
-/* Navbar */
-
+/*========================
+  3. Navbar
+========================*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -61,7 +75,7 @@ body {
 .navbar .navbar-nav a {
   color: var(--teksSec);
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: var(--font-xs);
   margin: 0 1.4rem;
 }
 
@@ -95,7 +109,9 @@ body {
   display: none;
 }
 
-/* Hero Section */
+/*========================
+  4. Hero Section
+========================*/
 .hero {
   min-height: 100vh;
   display: flex;
@@ -109,28 +125,13 @@ body {
   text-align: right;
 }
 
-.hero::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 30%;
-  left: 0;
-  bottom: 0;
-  /* background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 8%,
-    rgba(1, 1, 3, 1) 50%
-  ); */
-}
-
 .hero .content {
   padding: 1.4rem 7%;
   max-width: 60rem;
 }
 
 .hero .content h1 {
-  font-size: 5em;
+  font-size: var(--font-xl);
   color: var(--teksSec);
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   line-height: 1.2;
@@ -140,27 +141,29 @@ body {
   margin-top: 1rem;
   display: inline-block;
   padding: 1rem 3rem;
-  font-size: 1.4rem;
+  font-size: var(--font-xs);
   color: var(--teksThird);
   background-color: var(--third);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
-/* About Section */
+/*========================
+  5. About Section
+========================*/
 .about {
   padding: 5rem 7% 1.4rem;
 }
 
 .about h2 {
   text-align: center;
-  font-size: 2.6rem;
+  font-size: var(--font-md);
   margin-bottom: 3rem;
 }
 
 .about p {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: var(--font-sm);
   margin-bottom: 3rem;
 }
 
@@ -182,7 +185,6 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: visible;
   text-align: center;
-  font-family: sans-serif;
   background-color: transparent;
 }
 
@@ -237,7 +239,9 @@ body {
   transform: scale(1.05);
 }
 
-/* Report Section */
+/*========================
+  6. Report Section
+========================*/
 .report {
   min-height: 100vh;
   display: flex;
@@ -250,10 +254,6 @@ body {
   justify-content: flex-end;
   text-align: left;
 }
-/* 
-.report .content {
-  
-} */
 
 .report .content h1 {
   color: var(--teksSec);
@@ -263,7 +263,6 @@ body {
   margin-top: 0;
   display: inline-block;
   font-size: 1.6rem;
-  /* color: var(--bg); */
   color: var(--teksSec);
   background-color: transparent;
   border-radius: 0.5rem;
@@ -277,6 +276,7 @@ body {
   transform: scale(1.05);
 }
 
+/* Report Form */
 .report-form-section {
   width: 100%;
   padding: 20px;
@@ -441,21 +441,23 @@ body {
   background-color: #1a5c1a;
 }
 
-/* Donate Section */
+/*========================
+  7. Donate Section
+========================*/
 .donate {
   padding: 5rem 7% 1.4rem;
 }
 
 .donate h2 {
   text-align: center;
-  font-size: 3rem;
+  font-size: var(--font-lg);
   margin-bottom: 0;
   color: var(--teksSec);
 }
 
 .donate p {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: var(--font-sm);
   margin-bottom: 4rem;
   color: var(--teks);
   opacity: 80%;
@@ -463,7 +465,6 @@ body {
 
 .card-donasi {
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   justify-content: center;
@@ -478,7 +479,6 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  font-family: sans-serif;
   background-color: white;
 }
 
@@ -510,13 +510,6 @@ body {
   margin-bottom: 10px;
 }
 
-.card-donasi-body p {
-  font-size: 1em;
-  color: var(--teksThird);
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
 .card-donasi-button {
   background-color: var(--third);
   color: var(--primary);
@@ -541,9 +534,8 @@ body {
   transform: scale(1.05);
 }
 
-/* Container Utama Form Donasi */
 .donate > div:last-child {
-  background-color: #8bb576;
+  background-color: var(--bg-form-container);
   padding: 30px 7%;
   margin-top: 50px;
   border-radius: 20px;
@@ -562,13 +554,15 @@ body {
 
 #pilihan-shelter,
 #jumlah-nominal,
-.contact-form input {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 12px 15px;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 #pilihan-shelter {
@@ -578,7 +572,8 @@ body {
   width: 400px;
 }
 
-.donate label[for="pilihan-shelter"] {
+.donate label[for="pilihan-shelter"],
+.contact-form label {
   display: block;
   font-size: 1.1rem;
   font-weight: 500;
@@ -586,22 +581,27 @@ body {
   color: var(--teks);
 }
 
-/* Payment Method (Radio Button) */
-.payment-method-options {
+.contact-form {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.condition-options {
+  display: flex;
+  flex-direction: row;
   gap: 30px;
   margin-top: 15px;
 }
-
-.payment-method-options label {
+.donate .condition-options label {
   font-size: 1rem;
   font-weight: 400;
   display: flex;
   align-items: center;
   color: var(--teks);
+  margin-bottom: 0;
 }
-
-.payment-method-options input[type="radio"] {
+.donate .condition-options input[type="radio"] {
   accent-color: var(--third);
   margin-right: 8px;
   width: 16px;
@@ -627,8 +627,9 @@ body {
   background-color: var(--adminSec);
 }
 
-/* Adopt Section */
-
+/*========================
+  8. Adopt Section
+========================*/
 .adopt {
   padding: 5rem 7% 1.4rem;
 }
@@ -643,7 +644,7 @@ body {
 
 .adopt h2 {
   text-align: center;
-  font-size: 3rem;
+  font-size: var(--font-lg);
   margin-bottom: 0;
   color: var(--teksSec);
 }
@@ -661,7 +662,7 @@ body {
   border-radius: 15px;
   padding: 20px;
   margin: 50px auto;
-  max-width: 80%;
+  max-width: 90%;
 }
 
 .search-input {
@@ -677,7 +678,7 @@ body {
 }
 
 .search-input:focus {
-  border-color: #1a2b0c;
+  border-color: var(--third);
 }
 
 .bagian-filter h2 {
@@ -708,11 +709,10 @@ body {
 
 .card-adopt {
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   justify-content: center;
-  padding: 50px;
+  padding: 50px 0;
 }
 
 .card-adopt-inside {
@@ -723,7 +723,6 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  font-family: sans-serif;
   background-color: white;
 }
 
@@ -731,7 +730,7 @@ body {
   width: 90%;
   height: 200px;
   border-radius: 9%;
-  object-fit: fill;
+  object-fit: cover;
   margin: 20px auto 10px auto;
   display: block;
 }
@@ -764,10 +763,10 @@ body {
   text-align: center;
   font-size: 1em;
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  width: 50%;
+  width: 80%;
   margin-bottom: 10px;
   display: block;
   margin-left: auto;
@@ -780,7 +779,141 @@ body {
   transform: scale(1.05);
 }
 
-/* Media queries */
+/*========================
+  9. Education Section
+========================*/
+.edu {
+  padding: 5rem 7% 1.4rem;
+}
+
+.edu h2,
+.edu p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.edu h2 {
+  font-size: var(--font-lg);
+}
+.edu p {
+  font-size: var(--font-sm);
+  color: var(--shadowText);
+}
+
+.card-edu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 50px 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card-edu-main {
+  grid-column: 1 / span 3;
+
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  background-image: url("../images/Edukasi/section.jpg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 400px;
+}
+
+.card-main-body {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 50%;
+  max-width: 500px;
+
+  background-color: rgba(255, 255, 255, 0.9);
+  min-height: 100%;
+  color: var(--teksSec);
+}
+
+.card-main-body h2 {
+  font-size: 2.5em;
+  color: var(--teksSec);
+}
+
+.card-main-body p {
+  color: var(--teksSec);
+}
+
+.card-edu-main .detail-button {
+  background-color: var(--third);
+  color: var(--teksThird);
+  border: none;
+}
+
+.card-edu-small {
+  position: relative;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+}
+
+.card-edu-main .card-main-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.card-edu-small .card-small-body {
+  padding: 20px;
+}
+
+.card-edu-small img {
+  width: 90%;
+  height: 200px;
+  border-radius: 9%;
+  object-fit: cover;
+  margin: 20px auto 10px auto;
+  display: block;
+}
+
+.card-main-body h2,
+.card-small-body h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.card-main-body p,
+.card-small-body p {
+  font-size: 1em;
+  color: var(--teksSec);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.card-edu-small .detail-button {
+  background-color: var(--third);
+  color: var(--teksThird);
+  border: none;
+}
+
+/*========================
+  10. Media Queries
+========================*/
 
 /* Laptop */
 @media (max-width: 1366px) {
@@ -795,25 +928,36 @@ body {
     font-size: 62%;
   }
 
-  #humburger-menu {
-    display: inline-block;
-  }
-
+  /* Report Form Grid Adjustment */
   .report-grid {
     grid-template-columns: 1fr 1fr;
   }
 
   .location-area {
-    grid-column: 1 / span 2; /* Mencakup 2 kolom */
+    grid-column: 1 / span 2;
   }
 
   .details-box {
-    grid-column: 1 / span 2; /* Mencakup 2 kolom */
+    grid-column: 1 / span 2;
   }
 
-  /* Navbar */
+  /* Education Grid Adjustment */
+  .card-edu {
+    grid-template-columns: 1fr;
+  }
 
-  #humberger-menu {
+  .card-edu-main {
+    min-height: 350px;
+  }
+
+  .card-main-body {
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  /* Navbar Adjustment */
+  #humburger-menu {
     display: inline-block;
   }
 
@@ -854,6 +998,7 @@ body {
     font-size: 55%;
   }
 
+  /* Report Form Grid Adjustment */
   .report-grid {
     grid-template-columns: 1fr;
   }
@@ -863,11 +1008,13 @@ body {
     grid-column: auto;
   }
 
-  .donation-form-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+  /* Form Donasi */
   #pilihan-shelter {
     width: 100%;
+  }
+
+  .condition-options {
+    flex-direction: column;
+    gap: 10px;
   }
 }
